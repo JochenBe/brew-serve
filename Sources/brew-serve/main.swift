@@ -10,7 +10,7 @@ import Dispatch
 import Foundation
 
 struct Serve: ParsableCommand {
-    @Argument
+    @Argument(help: "The service to run.")
     var service: String
     
     func stop() {
