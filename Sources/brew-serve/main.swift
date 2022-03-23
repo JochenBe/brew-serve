@@ -41,7 +41,11 @@ struct Serve: ParsableCommand {
         let sigtermSource = setSignalEventHandler(signal: SIGTERM, handler: stop)
         sigtermSource.resume()
         
-        BrewServices.run(service)
+        let terminationStatus = BrewServices.run(service)
+        
+        guard terminationStatus == 0 else {
+            Serve.exit()
+        }
         
         dispatchMain()
     }

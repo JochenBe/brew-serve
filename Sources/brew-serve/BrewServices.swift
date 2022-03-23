@@ -8,7 +8,8 @@
 import Foundation
 
 final class BrewServices {
-    private static func execute(_ args: String...) {
+    @discardableResult
+    private static func execute(_ args: String...) -> Int32 {
         let process = Process()
         let outputPipe = Pipe()
         
@@ -32,9 +33,11 @@ final class BrewServices {
         process.waitUntilExit()
         
         NotificationCenter.default.removeObserver(observer)
+        
+        return process.terminationStatus
     }
     
-    static func run(_ service: String) {
+    static func run(_ service: String) -> Int32 {
         execute("run", service)
     }
     
