@@ -13,12 +13,6 @@ struct Serve: ParsableCommand {
     @Argument(help: "The service to run.")
     var service: String
     
-    func stop() {
-        print("")
-        BrewServices.stop(service)
-        Serve.exit()
-    }
-    
     func setSignalEventHandler(signal s: Int32, handler: @escaping () -> Void) -> DispatchSourceSignal {
         let source = DispatchSource.makeSignalSource(signal: s)
         source.setEventHandler(handler: handler)
@@ -26,6 +20,12 @@ struct Serve: ParsableCommand {
         signal(s, SIG_IGN)
         
         return source
+    }
+    
+    func stop() {
+        print("")
+        BrewServices.stop(service)
+        Serve.exit()
     }
     
     func run() {
