@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "shell",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JochenBe/Shell",
+      "state" : {
+        "revision" : "a43e19a671ed256ca2672297d86af71503a61e43",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",

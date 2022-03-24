@@ -7,7 +7,6 @@
 
 import ArgumentParser
 import Dispatch
-import Foundation
 
 struct Serve: ParsableCommand {
     @Argument(help: "The service to run.")
