@@ -8,7 +8,7 @@
 import ArgumentParser
 import Dispatch
 
-struct Serve: ParsableCommand {
+struct BrewServe: ParsableCommand {
     @Argument(help: "The service to run.")
     var service: String
     
@@ -24,7 +24,7 @@ struct Serve: ParsableCommand {
     func stop() {
         print("")
         BrewServices.stop(service)
-        Serve.exit()
+        Self.exit()
     }
     
     func run() {
@@ -43,11 +43,11 @@ struct Serve: ParsableCommand {
         let terminationStatus = BrewServices.run(service)
         
         guard terminationStatus == 0 else {
-            Serve.exit()
+            Self.exit()
         }
         
         dispatchMain()
     }
 }
 
-Serve.main()
+BrewServe.main()
