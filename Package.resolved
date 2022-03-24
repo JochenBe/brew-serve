@@ -1,23 +1,25 @@
 {
-  "pins" : [
-    {
-      "identity" : "shell",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/JochenBe/Shell",
-      "state" : {
-        "revision" : "a43e19a671ed256ca2672297d86af71503a61e43",
-        "version" : "1.2.0"
+  "object": {
+    "pins": [
+      {
+        "package": "Shell",
+        "repositoryURL": "https://github.com/JochenBe/Shell",
+        "state": {
+          "branch": null,
+          "revision": "a43e19a671ed256ca2672297d86af71503a61e43",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "82905286cc3f0fa8adc4674bf49437cab65a8373",
+          "version": "1.1.1"
+        }
       }
-    },
-    {
-      "identity" : "swift-argument-parser",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-argument-parser",
-      "state" : {
-        "revision" : "82905286cc3f0fa8adc4674bf49437cab65a8373",
-        "version" : "1.1.1"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }
